@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "5er Buyer Requests check",
+    "description": "unofficial fiverr buyer requests checker",
+    "version": "1.0",
+    "action":{
+        "default_popup" : "index.html",
+        "default_icon" : "/assets/fav.png"
+    },
+    "icons": {
+        "16": "/assets/fav2.png",
+        "48": "/assets/fav2.png",
+        "128": "/assets/fav2.png"
+    },
+    "content_scripts":[
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js":[
+                "script.js"
+            ]
+        }
+    ],
+    "background":{
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "scripting",
+        "tabs",
+        "storage",
+        "notifications",
+        "alarms"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
