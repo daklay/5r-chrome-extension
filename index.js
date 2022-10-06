@@ -2,7 +2,7 @@ var btn = document.getElementById("alert");
 
 chrome.tabs.query({active: true, currentWindow: true}, tabs=>{
     const tab = tabs[0]
-    const username = "urusername"
+    const username = "codebros6"
     if(tab.url === `https://www.fiverr.com/users/${username}/requests`){
         let active = false
         btn.addEventListener('click', function() {
